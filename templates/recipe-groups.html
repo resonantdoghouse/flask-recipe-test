@@ -4,7 +4,7 @@
 
 
 {% for recipe_group in recipe_groups %}
- <a href = "{{url_for('showRecipes', recipe_group_id = recipe_group.id)}}">{{recipe_group.name}}</a>
+ <h5><a href = "{{url_for('showRecipes', recipe_group_id = recipe_group.id)}}">{{recipe_group.name}}</a></h5>
 {% endfor %}
 
 

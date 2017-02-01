@@ -34,7 +34,7 @@ def showRecipeGroups():
     return render_template('recipe-groups.html', recipe_groups=recipe_groups)
 
 
-# Show a recipe
+# show recipes in group
 @app.route('/recipe-group/<int:recipe_group_id>/')
 @app.route('/recipe-group/<int:recipe_group_id>/recipes/')
 def showRecipes(recipe_group_id):
@@ -42,6 +42,7 @@ def showRecipes(recipe_group_id):
     recipes = session.query(Recipe).filter_by(
         recipe_group_id=recipe_group_id).all()
     return render_template('recipes.html', recipes=recipes, recipe_group=recipe_group)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

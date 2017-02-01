@@ -3,8 +3,13 @@
 {% block content %}
 
 
-		test
+		<h5>{{ recipe_group.name }}</h5>
 
+		{% for recipe in recipes %}
 
+			<h6>{{ recipe.name }}</h6>
+			<p>{{ recipe.description }}</p>
+
+		{% endfor %}
 
 {% endblock %}
