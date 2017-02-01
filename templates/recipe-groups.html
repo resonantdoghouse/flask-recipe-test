@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Recipe Group{% endblock %}
+{% block content %}
+
+
+{% for recipe_group in recipe_groups %}
+ <a href = "{{url_for('showRecipes', recipe_group_id = recipe_group.id)}}">{{recipe_group.name}}</a>
+{% endfor %}
+
+
+{% endblock %}

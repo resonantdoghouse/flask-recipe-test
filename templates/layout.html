@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/materialize.min.css') }}">
+    <title>{% block title %}{% endblock %} - Template</title>
+    {% endblock %}
+
+
+  </head>
+  <body>
+
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/recipe-groups/" class="brand-logo">Recipes</a>
+      </div>
+    </nav>
+
+
+
+    <div id="content" class="container">
+      {% block content %}{% endblock %}
+    </div>
+
+    <footer class="page-footer blue lighten-5">
+      {% block footer %}
+      <div class="container">
+        &copy; {{ now.year }} by <a href="{{ url }}" target="_blank">{{ url }}</a>
+      </div>
+      {% endblock %}
+    </footer>
+
+  </body>
+</html>
