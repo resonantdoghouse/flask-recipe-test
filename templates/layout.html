@@ -1,13 +1,10 @@
 <!doctype html>
 <html>
   <head>
-
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='dist/materialize.min.css') }}">
-    <title>{% block title %}{% endblock %} - Template</title>
+    <title>{% block title %}{% endblock %}</title>
     {% endblock %}
-
-
   </head>
   <body>
 
@@ -16,8 +13,6 @@
         <a id="logo-container" href="/recipe-groups/" class="brand-logo">Recipes</a>
       </div>
     </nav>
-
-
 
     <div id="content" class="container">
       {% block content %}{% endblock %}

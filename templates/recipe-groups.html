@@ -3,9 +3,20 @@
 {% block content %}
 
 
+
 {% for recipe_group in recipe_groups %}
  <h5><a href = "{{url_for('showRecipes', recipe_group_id = recipe_group.id)}}">{{recipe_group.name}}</a></h5>
+ <a href = "{{url_for('editRecipeGroup',recipe_group_id = recipe_group.id)}}"
+    class="waves-effect waves-light btn">Edit Recipe Group</a>
+<hr>
 {% endfor %}
+
+<p>
+<a href="{{url_for('newRecipeGroup')}}" class="waves-effect waves-light btn">
+  Create a New Recipe Group
+</a>
+</p>
+<br><br>
 
 
 {% endblock %}
