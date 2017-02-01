@@ -9,6 +9,7 @@ app = Flask(__name__)
 engine = create_engine('sqlite:///recipes.db')
 Base.metadata.bind = engine
 
+
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
